@@ -1,2 +1,0 @@
-# My-Practices
-My Practices
