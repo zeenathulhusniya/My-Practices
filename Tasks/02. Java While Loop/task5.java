@@ -1,0 +1,17 @@
+class Main {
+    public static void main(String[] args) {
+
+        // declare variables
+        int number = 1234;
+        int reverse = 0;
+
+        // reverse the number
+        while (number != 0) {
+            int digit = number % 10;
+            reverse = reverse * 10 + digit;
+            number = number / 10;
+        }
+
+        System.out.println("Reversed number = " + reverse);
+    }
+}
