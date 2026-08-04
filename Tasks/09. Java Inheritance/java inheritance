@@ -1,0 +1,127 @@
+class Employee {
+
+    String name;
+    int id;
+
+    Employee(
+        String name,
+        int id
+    ) {
+
+        this.name = name;
+        this.id = id;
+    }
+
+    void displayInfo() {
+
+        System.out.println(
+            "Employee Name: " +
+            name
+        );
+
+        System.out.println(
+            "Employee ID: " +
+            id
+        );
+    }
+}
+
+class FullTimeEmployee
+extends Employee {
+
+    double monthlySalary;
+
+    FullTimeEmployee(
+        String name,
+        int id,
+        double monthlySalary
+    ) {
+
+        super(name, id);
+
+        this.monthlySalary =
+            monthlySalary;
+    }
+
+    void calculateSalary() {
+
+        System.out.println(
+            "Monthly Salary: " +
+            monthlySalary
+        );
+    }
+}
+
+class PartTimeEmployee
+extends Employee {
+
+    int hoursWorked;
+    double hourlyRate;
+
+    PartTimeEmployee(
+        String name,
+        int id,
+        int hoursWorked,
+        double hourlyRate
+    ) {
+
+        super(name, id);
+
+        this.hoursWorked =
+            hoursWorked;
+
+        this.hourlyRate =
+            hourlyRate;
+    }
+
+    void calculateSalary() {
+
+        double salary =
+            hoursWorked *
+            hourlyRate;
+
+        System.out.println(
+            "Part-Time Salary: " +
+            salary
+        );
+    }
+}
+
+class Main {
+
+    public static void main(
+        String[] args
+    ) {
+
+        FullTimeEmployee fullTime =
+            new FullTimeEmployee(
+                "Husniya",
+                101,
+                50000
+            );
+
+        PartTimeEmployee partTime =
+            new PartTimeEmployee(
+                "Sara",
+                102,
+                40,
+                500
+            );
+
+        System.out.println(
+            "Full-Time Employee"
+        );
+
+        fullTime.displayInfo();
+        fullTime.calculateSalary();
+
+        System.out.println();
+
+        System.out.println(
+            "Part-Time Employee"
+        );
+
+        partTime.displayInfo();
+        partTime.calculateSalary();
+    }
+}

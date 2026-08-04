@@ -1,0 +1,91 @@
+abstract class Vehicle {
+
+```
+// Abstract methods
+abstract void start();
+
+abstract void stop();
+```
+
+}
+
+// Interface
+interface FuelEfficiency {
+
+```
+void calculateMileage();
+```
+
+}
+
+// Car class
+class Car extends Vehicle implements FuelEfficiency {
+
+```
+@Override
+void start() {
+    System.out.println("Car is starting.");
+}
+
+@Override
+void stop() {
+    System.out.println("Car is stopping.");
+}
+
+@Override
+public void calculateMileage() {
+    System.out.println("Car mileage: 15 km/l");
+}
+```
+
+}
+
+// Bike class
+class Bike extends Vehicle implements FuelEfficiency {
+
+```
+@Override
+void start() {
+    System.out.println("Bike is starting.");
+}
+
+@Override
+void stop() {
+    System.out.println("Bike is stopping.");
+}
+
+@Override
+public void calculateMileage() {
+    System.out.println("Bike mileage: 45 km/l");
+}
+```
+
+}
+
+// Main class
+public class VehicleManagementSystem {
+
+```
+public static void main(String[] args) {
+
+    // Create a Car object
+    Car car = new Car();
+
+    System.out.println("Car Details");
+    car.start();
+    car.calculateMileage();
+    car.stop();
+
+    System.out.println();
+
+    // Create a Bike object
+    Bike bike = new Bike();
+
+    System.out.println("Bike Details");
+    bike.start();
+    bike.calculateMileage();
+    bike.stop();
+}
+```
+
+}

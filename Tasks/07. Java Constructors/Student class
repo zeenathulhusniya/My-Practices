@@ -1,0 +1,81 @@
+class Student {
+
+    int studentId;
+    String studentName;
+    String course;
+
+    // Default constructor
+    Student() {
+
+        studentId = 0;
+        studentName = "Unknown";
+        course = "Not Assigned";
+    }
+
+    // Parameterized constructor
+    Student(
+        int studentId,
+        String studentName,
+        String course
+    ) {
+
+        this.studentId = studentId;
+        this.studentName = studentName;
+        this.course = course;
+    }
+
+    // Copy constructor
+    Student(Student student) {
+
+        this.studentId =
+            student.studentId;
+
+        this.studentName =
+            student.studentName;
+
+        this.course =
+            student.course;
+    }
+
+    void displayDetails() {
+
+        System.out.println(
+            "Student ID: " +
+            studentId
+        );
+
+        System.out.println(
+            "Student Name: " +
+            studentName
+        );
+
+        System.out.println(
+            "Course: " +
+            course
+        );
+
+        System.out.println();
+    }
+
+    public static void main(
+        String[] args
+    ) {
+
+        Student student1 =
+            new Student();
+
+        Student student2 =
+            new Student(
+                101,
+                "Husniya",
+                "Java"
+            );
+
+        Student student3 =
+            new Student(student2);
+
+        student1.displayDetails();
+        student2.displayDetails();
+        student3.displayDetails();
+    }
+}
