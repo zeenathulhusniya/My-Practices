@@ -1,0 +1,36 @@
+class StringTask04 {
+    public static void main(String[] args) {
+
+        String text = "swiss";
+
+        for (int i = 0;
+             i < text.length();
+             i++) {
+
+            boolean repeated = false;
+
+            for (int j = 0;
+                 j < text.length();
+                 j++) {
+
+                if (i != j &&
+                    text.charAt(i) ==
+                    text.charAt(j)) {
+
+                    repeated = true;
+                    break;
+                }
+            }
+
+            if (!repeated) {
+
+                System.out.println(
+                    "First non-repeated character: " +
+                    text.charAt(i)
+                );
+
+                break;
+            }
+        }
+    }
+}

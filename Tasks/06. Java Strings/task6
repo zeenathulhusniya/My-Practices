@@ -1,0 +1,60 @@
+class StringTask06 {
+    public static void main(String[] args) {
+
+        String first = "listen";
+        String second = "silent";
+
+        boolean isAnagram = true;
+
+        if (first.length() != second.length()) {
+
+            isAnagram = false;
+
+        } else {
+
+            for (int i = 0;
+                 i < first.length();
+                 i++) {
+
+                int firstCount = 0;
+                int secondCount = 0;
+
+                for (int j = 0;
+                     j < first.length();
+                     j++) {
+
+                    if (first.charAt(i) ==
+                        first.charAt(j)) {
+
+                        firstCount++;
+                    }
+
+                    if (first.charAt(i) ==
+                        second.charAt(j)) {
+
+                        secondCount++;
+                    }
+                }
+
+                if (firstCount != secondCount) {
+
+                    isAnagram = false;
+                    break;
+                }
+            }
+        }
+
+        if (isAnagram) {
+
+            System.out.println(
+                "The strings are Anagrams."
+            );
+
+        } else {
+
+            System.out.println(
+                "The strings are not Anagrams."
+            );
+        }
+    }
+}

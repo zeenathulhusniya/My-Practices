@@ -1,0 +1,39 @@
+class StringTask10 {
+    public static void main(String[] args) {
+
+        String sentence =
+            "Java programming is interesting";
+
+        String currentWord = "";
+        String longestWord = "";
+
+        for (int i = 0;
+             i <= sentence.length();
+             i++) {
+
+            if (i == sentence.length() ||
+                sentence.charAt(i) == ' ') {
+
+                if (currentWord.length() >
+                    longestWord.length()) {
+
+                    longestWord =
+                        currentWord;
+                }
+
+                currentWord = "";
+
+            } else {
+
+                currentWord =
+                    currentWord +
+                    sentence.charAt(i);
+            }
+        }
+
+        System.out.println(
+            "Longest word: " +
+            longestWord
+        );
+    }
+}
