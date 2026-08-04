@@ -1,0 +1,14 @@
+class Task01 {
+public static void main(String[] args) {
+
+
+    String[] cars = {"Honda", "Toyota", "Ford"};
+
+    for (int j = 0; j < cars.length; j++) {
+        System.out.println(cars[j]);
+    }
+}
+
+
+}
+}

@@ -1,0 +1,26 @@
+class Task06 {
+public static void main(String[] args) {
+
+```
+    int[] numbers = {10, 20, 30, 40, 50};
+
+    int searchNumber = 30;
+    boolean found = false;
+
+    for (int i = 0; i < numbers.length; i++) {
+
+        if (numbers[i] == searchNumber) {
+            found = true;
+            break;
+        }
+    }
+
+    if (found) {
+        System.out.println(searchNumber + " was found.");
+    } else {
+        System.out.println(searchNumber + " was not found.");
+    }
+}
+```
+
+}
